@@ -40,43 +40,52 @@ export function MainSidebar({ children }: { children: React.ReactNode }) {
         <SidebarContent>
           <SidebarMenu>
             <SidebarMenuItem>
-              <Link href="/projects">
-                <SidebarMenuButton
-                  isActive={isActive('/projects')}
-                  tooltip="Projects"
-                >
-                  <Home />
-                  <span>Proyectos</span>
-                </SidebarMenuButton>
-              </Link>
+              <SidebarMenuButton
+                asChild
+                isActive={isActive('/projects')}
+                tooltip="Projects"
+              >
+                <Link href="/projects">
+                  <span className="flex items-center gap-2">
+                    <Home />
+                    <span>Proyectos</span>
+                  </span>
+                </Link>
+              </SidebarMenuButton>
             </SidebarMenuItem>
             <SidebarMenuItem>
-              <Link href="#">
-                <SidebarMenuButton tooltip="Reports">
-                  <FileText />
-                  <span>Reportes</span>
-                </SidebarMenuButton>
-              </Link>
+              <SidebarMenuButton asChild tooltip="Reports">
+                <Link href="#">
+                  <span className="flex items-center gap-2">
+                    <FileText />
+                    <span>Reportes</span>
+                  </span>
+                </Link>
+              </SidebarMenuButton>
             </SidebarMenuItem>
             <SidebarMenuItem>
-              <Link href="#">
-                <SidebarMenuButton tooltip="Bibliography">
-                  <BookText />
-                  <span>Bibliografía</span>
-                </SidebarMenuButton>
-              </Link>
+              <SidebarMenuButton asChild tooltip="Bibliography">
+                <Link href="#">
+                  <span className="flex items-center gap-2">
+                    <BookText />
+                    <span>Bibliografía</span>
+                  </span>
+                </Link>
+              </SidebarMenuButton>
             </SidebarMenuItem>
           </SidebarMenu>
         </SidebarContent>
         <SidebarFooter>
           <SidebarMenu>
             <SidebarMenuItem>
-              <Link href="/login">
-                <SidebarMenuButton tooltip="Iniciar Sesión">
-                  <LogIn />
-                  <span>Iniciar Sesión</span>
-                </SidebarMenuButton>
-              </Link>
+              <SidebarMenuButton asChild tooltip="Iniciar Sesión">
+                <Link href="/login">
+                  <span className="flex items-center gap-2">
+                    <LogIn />
+                    <span>Iniciar Sesión</span>
+                  </span>
+                </Link>
+              </SidebarMenuButton>
             </SidebarMenuItem>
           </SidebarMenu>
         </SidebarFooter>

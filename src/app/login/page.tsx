@@ -11,7 +11,6 @@ import {
 } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import Link from 'next/link';
 
 export default function LoginPage() {
@@ -21,27 +20,10 @@ export default function LoginPage() {
         <CardHeader className="text-center">
           <CardTitle className="text-2xl">Iniciar Sesión</CardTitle>
           <CardDescription>
-            Seleccione su tipo de usuario e ingrese sus credenciales.
+            Ingrese sus credenciales para acceder a su cuenta.
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
-          <div className="space-y-2">
-            <Label>Tipo de Usuario</Label>
-            <RadioGroup defaultValue="estudiante" className="flex justify-around pt-2">
-              <div className="flex items-center space-x-2">
-                <RadioGroupItem value="estudiante" id="estudiante" />
-                <Label htmlFor="estudiante">Estudiante</Label>
-              </div>
-              <div className="flex items-center space-x-2">
-                <RadioGroupItem value="profesor" id="profesor" />
-                <Label htmlFor="profesor">Profesor</Label>
-              </div>
-              <div className="flex items-center space-x-2">
-                <RadioGroupItem value="administrador" id="administrador" />
-                <Label htmlFor="administrador">Admin</Label>
-              </div>
-            </RadioGroup>
-          </div>
           <div className="space-y-2">
             <Label htmlFor="email">Correo Electrónico</Label>
             <Input id="email" type="email" placeholder="usuario@unexca.edu.ve" required />
@@ -55,6 +37,12 @@ export default function LoginPage() {
           <Link href="/projects" className="w-full">
             <Button className="w-full">Ingresar</Button>
           </Link>
+          <div className="text-center text-sm">
+            ¿No tienes una cuenta?{' '}
+            <Link href="/register" className="underline">
+              Regístrate
+            </Link>
+          </div>
         </CardFooter>
       </Card>
     </div>

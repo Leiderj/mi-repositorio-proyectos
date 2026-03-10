@@ -40,44 +40,43 @@ export function MainSidebar({ children }: { children: React.ReactNode }) {
         <SidebarContent>
           <SidebarMenu>
             <SidebarMenuItem>
-              <SidebarMenuButton
-                asChild
-                isActive={isActive('/projects')}
-                tooltip="Projects"
-              >
-                <Link href="/projects">
+              <Link href="/projects">
+                <SidebarMenuButton
+                  isActive={isActive('/projects')}
+                  tooltip="Projects"
+                >
                   <Home />
                   <span>Proyectos</span>
-                </Link>
-              </SidebarMenuButton>
+                </SidebarMenuButton>
+              </Link>
             </SidebarMenuItem>
             <SidebarMenuItem>
-              <SidebarMenuButton asChild tooltip="Reports">
-                <Link href="#">
+              <Link href="#">
+                <SidebarMenuButton tooltip="Reports">
                   <FileText />
                   <span>Reportes</span>
-                </Link>
-              </SidebarMenuButton>
+                </SidebarMenuButton>
+              </Link>
             </SidebarMenuItem>
             <SidebarMenuItem>
-              <SidebarMenuButton asChild tooltip="Bibliography">
-                <Link href="#">
+              <Link href="#">
+                <SidebarMenuButton tooltip="Bibliography">
                   <BookText />
                   <span>Bibliografía</span>
-                </Link>
-              </SidebarMenuButton>
+                </SidebarMenuButton>
+              </Link>
             </SidebarMenuItem>
           </SidebarMenu>
         </SidebarContent>
         <SidebarFooter>
           <SidebarMenu>
             <SidebarMenuItem>
-              <SidebarMenuButton asChild tooltip="Iniciar Sesión">
-                <Link href="/login">
+              <Link href="/login">
+                <SidebarMenuButton tooltip="Iniciar Sesión">
                   <LogIn />
                   <span>Iniciar Sesión</span>
-                </Link>
-              </SidebarMenuButton>
+                </SidebarMenuButton>
+              </Link>
             </SidebarMenuItem>
           </SidebarMenu>
         </SidebarFooter>

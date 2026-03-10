@@ -16,8 +16,7 @@ import {
   BookText,
   FileText,
   Home,
-  LogOut,
-  Settings,
+  LogIn,
 } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
@@ -73,15 +72,11 @@ export function MainSidebar({ children }: { children: React.ReactNode }) {
         <SidebarFooter>
           <SidebarMenu>
             <SidebarMenuItem>
-              <SidebarMenuButton tooltip="Settings">
-                <Settings />
-                <span>Configuración</span>
-              </SidebarMenuButton>
-            </SidebarMenuItem>
-            <SidebarMenuItem>
-              <SidebarMenuButton>
-                <LogOut />
-                <span>Cerrar Sesión</span>
+              <SidebarMenuButton asChild tooltip="Iniciar Sesión">
+                <Link href="/login">
+                  <LogIn />
+                  <span>Iniciar Sesión</span>
+                </Link>
               </SidebarMenuButton>
             </SidebarMenuItem>
           </SidebarMenu>

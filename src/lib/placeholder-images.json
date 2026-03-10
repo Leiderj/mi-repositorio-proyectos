@@ -1,3 +1,28 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "project-1",
+      "description": "A team of developers collaborating around a table with laptops.",
+      "imageUrl": "https://picsum.photos/seed/10/600/400",
+      "imageHint": "team collaboration"
+    },
+    {
+      "id": "project-2",
+      "description": "Close-up of code on a computer screen.",
+      "imageUrl": "https://picsum.photos/seed/21/600/400",
+      "imageHint": "programming code"
+    },
+    {
+      "id": "project-3",
+      "description": "A person presenting a project on a whiteboard.",
+      "imageUrl": "https://picsum.photos/seed/32/600/400",
+      "imageHint": "project presentation"
+    },
+    {
+      "id": "project-4",
+      "description": "University campus building.",
+      "imageUrl": "https://picsum.photos/seed/43/600/400",
+      "imageHint": "university campus"
+    }
+  ]
 }

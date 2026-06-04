@@ -1,28 +1,22 @@
+// src/app/layout.tsx (Versión Limpia)
 import type { Metadata } from 'next';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
+// Ya NO importamos la Navbar aquí
 
 export const metadata: Metadata = {
   title: 'PNF-I ProjectHub',
   description: 'A platform for managing PNF-I projects at UNEXCA Altagracia.',
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode; }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="es" suppressHydrationWarning>
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-          rel="stylesheet"
-        />
+        {/* ... tus fuentes ... */}
       </head>
       <body className="font-body antialiased">
+        {/* Quitamos la <Navbar /> de aquí */}
         {children}
         <Toaster />
       </body>

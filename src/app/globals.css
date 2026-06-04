@@ -86,3 +86,35 @@ body {
     @apply bg-background text-foreground;
   }
 }
+@media print {
+  /* Escondemos el menú lateral y la barra superior superior */
+  .group\/sidebar-wrapper,
+  header,
+  nav,
+  aside {
+    display: none !important;
+  }
+
+  /* Aseguramos que la tabla ocupe toda la hoja */
+  main,
+  .overflow-y-auto {
+    overflow: visible !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: white !important;
+    color: black !important;
+  }
+
+  /* Estilos limpios para la tabla en papel */
+  table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+  }
+  
+  th, td {
+    border: 1px solid #e2e8f0 !important;
+    padding: 8px !important;
+  }
+}

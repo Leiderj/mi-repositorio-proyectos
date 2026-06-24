@@ -10,9 +10,11 @@ import {
   SidebarMenuButton,
   SidebarInset,
   SidebarTrigger,
+  SidebarGroup,
+  SidebarGroupLabel,
 } from '@/components/ui/sidebar';
 import { Logo } from '@/components/icons';
-import { BookText, FileText, Home, ShieldAlert, Loader2 } from 'lucide-react';
+import { Home, ShieldAlert, Loader2, Lightbulb, BookOpen, Settings } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 
@@ -48,7 +50,6 @@ export function MainSidebar({ children }: { children: React.ReactNode }) {
 
   const isActive = (path: string) => pathname === path;
 
-  // Mientras carga el rol, mostramos un estado neutro o un spinner
   if (cargandoRol) {
     return (
       <div className="flex h-screen w-screen items-center justify-center bg-background">
@@ -63,14 +64,13 @@ export function MainSidebar({ children }: { children: React.ReactNode }) {
         <SidebarHeader>
           <div className="flex items-center gap-2 p-2 border-b">
             <Logo className="size-8 text-primary" />
-            <h1 className="text-lg font-semibold">ProjectHub</h1>
+            <h1 className="text-lg font-semibold">UNEXCA PNF-I</h1>
           </div>
         </SidebarHeader>
         
         <SidebarContent>
           <SidebarMenu>
-            
-            {/* 🏠 PROYECTOS: Visible para ADMIN y BASICO solamente */}
+            {/* 🏠 PROYECTOS */}
             {(rol === 'admin' || rol === 'basico') && (
               <SidebarMenuItem>
                 <SidebarMenuButton asChild isActive={isActive('/projects')} tooltip="Proyectos">
@@ -84,35 +84,35 @@ export function MainSidebar({ children }: { children: React.ReactNode }) {
               </SidebarMenuItem>
             )}
             
-            {/* 📊 REPORTES: Oculto para Auditor, visible para el resto */}
+            {/* 💡 BANCO DE IDEAS */}
             {(rol === 'admin' || rol === 'basico') && (
               <SidebarMenuItem>
-                <SidebarMenuButton asChild tooltip="Reportes">
-                  <Link href="#">
+                <SidebarMenuButton asChild isActive={isActive('/banco-proyectos')} tooltip="Banco de Ideas">
+                  <Link href="/banco-proyectos">
                     <span className="flex items-center gap-2">
-                      <FileText className="h-4 w-4" />
-                      <span>Reportes</span>
+                      <Lightbulb className="h-4 w-4" />
+                      <span>Banco de Ideas</span>
                     </span>
                   </Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>
             )}
             
-            {/* 📚 BIBLIOGRAFÍA: Oculto para Auditor, visible para el resto */}
+            {/* 📚 RECURSOS DE APOYO */}
             {(rol === 'admin' || rol === 'basico') && (
               <SidebarMenuItem>
-                <SidebarMenuButton asChild tooltip="Bibliografía">
-                  <Link href="#">
+                <SidebarMenuButton asChild isActive={isActive('/recursos')} tooltip="Recursos de Apoyo">
+                  <Link href="/recursos">
                     <span className="flex items-center gap-2">
-                      <BookText className="h-4 w-4" />
-                      <span>Bibliografía</span>
+                      <BookOpen className="h-4 w-4" />
+                      <span>Recursos de Apoyo</span>
                     </span>
                   </Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>
             )}
 
-            {/* 🛡️ AUDITORÍA: Visible para ADMIN y AUDITOR únicamente */}
+            {/* 🛡️ AUDITORÍA */}
             {(rol === 'admin' || rol === 'auditor') && (
               <SidebarMenuItem>
                 <SidebarMenuButton asChild isActive={isActive('/auditoria')} tooltip="Auditoría">
@@ -125,8 +125,9 @@ export function MainSidebar({ children }: { children: React.ReactNode }) {
                 </SidebarMenuButton>
               </SidebarMenuItem>
             )}
-
           </SidebarMenu>
+
+          
         </SidebarContent>
       </Sidebar>
       

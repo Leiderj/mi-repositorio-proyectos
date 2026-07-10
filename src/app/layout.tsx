@@ -1,12 +1,17 @@
-// src/app/layout.tsx (Versión Limpia)
+// src/app/layout.tsx (Versión Limpia con PWA)
 import type { Metadata } from 'next';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
-// Ya NO importamos la Navbar aquí
 
+// Aquí combinamos tu metadata original con la configuración de la PWA
 export const metadata: Metadata = {
-  title: 'PNF-I ProjectHub',
-  description: 'A platform for managing PNF-I projects at UNEXCA Altagracia.',
+  title: 'UNEXCA PNF-I',
+  description: 'Gestión de Proyectos de Informática',
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'default',
+    title: 'UNEXCA PNF-I',
+  },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode; }>) {

@@ -94,7 +94,7 @@ export default function LoginPage() {
       {/* Tarjeta contenedora del formulario */}
       <Card className="w-full max-w-md shadow-xl border-t-4 border-primary">
         <CardHeader className="space-y-1">
-          <CardTitle className="text-3xl text-center font-bold tracking-tight">ProjectHub</CardTitle>
+          <CardTitle className="text-3xl text-center font-bold tracking-tight">UNEXCA PNF-I</CardTitle>
           <CardDescription className="text-center text-base">
             Acceso administrativo y estudiantil
           </CardDescription>

@@ -3,7 +3,7 @@ import { MetadataRoute } from 'next';
 export default function manifest(): MetadataRoute.Manifest {
   return {
     name: 'UNEXCA PNF-I ProjectHub',
-    short_name: 'ProjectHub',
+    short_name: 'UNEXCA PNF-I',
     description: 'Sistema de Registro y Gestión de Proyectos Socio-Tecnológicos PNF Informática',
     start_url: '/',
     display: 'standalone',

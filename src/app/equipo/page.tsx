@@ -21,7 +21,7 @@ export default function EquipoPage() {
    */
   const integrantes = [
     {
-      nombre: "Tu Nombre", // Aquí va tu nombre real al compilar
+      nombre: "Leider Jimenez", // Aquí va tu nombre real al compilar
       rol: "Desarrollador Principal",
       descripcion: "Estudiante de Ingeniería en Informática en la UNEXCA Sede Altagracia. Encargado de la arquitectura de la base de datos y la lógica del sistema.",
       correo: "ing.leiderjimenezb@gmail.com",
